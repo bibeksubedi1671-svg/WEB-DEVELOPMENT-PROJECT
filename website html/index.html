@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML — Deep</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="fullstack.html">Fullstack</a>
+    <a href="css.html">CSS</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="html.html" class="active">HTML</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>HTML (HyperText Markup Language)</h1>
+
+    <p>HTML is the markup language used to define the structure of web content. It provides elements such as headings, paragraphs, lists, tables, images, links, and forms. Modern HTML emphasizes semantic elements, accessibility, and mobile-friendly features.</p>
+
+    <h2>Example of HTML</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <!-- CSS Section -->
+    <h2>CSS (Cascading Style Sheets)</h2>
+    <p>CSS is used to style HTML content by changing colors, layouts, fonts, and responsiveness.</p>
+    <pre><code>body {
+  background: beige;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: blue;
+  text-align: center;
+}</code></pre>
+
+    <!-- Bootstrap Section -->
+    <h2>Bootstrap Framework</h2>
+    <p>Bootstrap provides prebuilt CSS and JavaScript components that make it easy to build responsive websites.</p>
+    <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"&gt;
+
+&lt;div class="container text-center"&gt;
+  &lt;h1 class="text-primary"&gt;Hello Bootstrap&lt;/h1&gt;
+  &lt;button class="btn btn-success"&gt;Click Me&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+    <!-- JavaScript Section -->
+    <h2>JavaScript</h2>
+    <p>JavaScript makes web pages interactive. It can change content, validate forms, and fetch data without reloading the page.</p>
+    <pre><code>&lt;button onclick="changeText()"&gt;Click Me&lt;/button&gt;
+&lt;p id="demo"&gt;Hello&lt;/p&gt;
+
+&lt;script&gt;
+  function changeText() {
+    document.getElementById("demo").innerHTML = "You clicked the button!";
+  }
+&lt;/script&gt;</code></pre>
+
+    <!-- Full Stack Section -->
+    <h2>Full Stack Development</h2>
+    <p>Full Stack combines front-end (HTML, CSS, JS) and back-end (server, APIs, databases) to build complete applications.</p>
+    <pre><code>// Backend: Node + Express
+const express = require('express');
+const app = express();
+app.get('/hello', (req,res) => res.send('Hello from server!'));
+app.listen(3000);
+
+// Frontend: HTML + fetch()
+&lt;button onclick="loadData()"&gt;Fetch&lt;/button&gt;
+&lt;p id="out"&gt;&lt;/p&gt;
+&lt;script&gt;
+async function loadData() {
+  let res = await fetch('http://localhost:3000/hello');
+  let text = await res.text();
+  document.getElementById('out').innerText = text;
+}
+&lt;/script&gt;</code></pre>
+
+    <p><strong>Summary:</strong> HTML structures your content, CSS makes it beautiful, Bootstrap speeds up styling, JavaScript adds interactivity, and Full Stack ties it all together with backend logic and databases.</p>
+  </main>
+</body>
+</html>

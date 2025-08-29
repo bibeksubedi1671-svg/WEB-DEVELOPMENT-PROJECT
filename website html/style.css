@@ -1,0 +1,178 @@
+/* =============================
+   General Page Styles
+============================= */
+:root { 
+  --brand:#222; 
+  --highlight:#007BFF; 
+  --bg:beige; 
+  --text:black; 
+}
+* { box-sizing: border-box; }
+body { 
+  margin:0; 
+  font-family: Arial, Helvetica, sans-serif; 
+  color:var(--text); 
+  background:var(--bg); 
+  line-height: 1.6;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* =============================
+   Navigation
+============================= */
+.nav {
+  background: var(--brand);
+  color: #fff;
+  position: sticky; 
+  top:0; 
+  z-index: 10;
+  display:flex; 
+  gap:24px; 
+  justify-content:center; 
+  align-items:center;
+  padding:14px 16px;
+}
+.nav a {
+  color:#fff; 
+  text-decoration:none; 
+  font-weight:700;
+  padding:6px 10px; 
+  border-radius:6px; 
+  transition: all .3s ease;
+}
+.nav a:hover {
+  background: var(--highlight);
+  transform: scale(1.1);
+  color: #fff;
+}
+.nav a.active {
+  background: var(--highlight);
+  color: #fff;
+}
+
+/* =============================
+   Hero Section
+============================= */
+.hero {
+  background: linear-gradient(135deg, #f8e9d2, #e4d8b4);
+  text-align:center; 
+  padding:80px 20px; 
+  animation: fadeIn 2s ease;
+}
+.hero h1 {
+  margin:0 0 10px; 
+  font-size:2.6rem; 
+  letter-spacing:.5px;
+  animation: slideIn 1.5s ease;
+}
+.hero p {
+  margin:0 0 18px; 
+  font-size:1.2rem; 
+  opacity:.9; 
+  animation: fadeIn 2.5s ease;
+}
+
+/* =============================
+   Container & Cards
+============================= */
+.container { 
+  max-width: 1000px; 
+  margin: 36px auto; 
+  padding: 0 16px; 
+}
+.grid { 
+  display:grid; 
+  gap:18px; 
+  grid-template-columns: repeat(12, 1fr); 
+}
+.card {
+  grid-column: span 6; 
+  background:#fff; 
+  border-radius:14px; 
+  padding:18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeUp 1s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,.15);
+}
+.card h3 { margin:6px 0 10px; color: var(--highlight); }
+.card p { margin: 0 0 12px; }
+
+/* =============================
+   Buttons
+============================= */
+.btn {
+  display:inline-block; 
+  text-decoration:none; 
+  font-weight:700;
+  border:2px solid var(--highlight); 
+  color:var(--highlight);
+  padding:8px 14px; 
+  border-radius:10px; 
+  transition: all .3s ease;
+}
+.btn:hover { 
+  background: var(--highlight); 
+  color:#fff; 
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* =============================
+   Code Blocks
+============================= */
+pre {
+  background:#111; 
+  color:#e8e8e8; 
+  padding:14px; 
+  overflow:auto;
+  border-radius:12px; 
+  font-size:.9rem; 
+  line-height:1.45;
+  margin-bottom: 20px;
+  transition: background 0.4s, transform 0.3s;
+}
+pre:hover {
+  background: #333;
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* =============================
+   Footer
+============================= */
+footer { 
+  text-align:center; 
+  color:#444; 
+  padding:24px 12px; 
+  margin-top:40px;
+  border-top: 2px solid #ccc;
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 860px) { 
+  .card { grid-column: span 12; } 
+}
+
+/* =============================
+   Animations
+============================= */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@keyframes slideIn {
+  from {transform:translateY(-50px); opacity:0;}
+  to {transform:translateY(0); opacity:1;}
+}
+@keyframes fadeUp {
+  from {transform:translateY(40px); opacity:0;}
+  to {transform:translateY(0); opacity:1;}
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}

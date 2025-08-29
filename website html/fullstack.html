@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack — CTE-138</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="fullstack.html" class="active">Fullstack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+  </nav>
+
+  <main class="container">
+    <h1>Full Stack Development</h1>
+    <p>Full Stack Development combines both the front-end and back-end of applications. A full stack developer builds user interfaces (HTML, CSS, JS) and connects them with servers, databases, and APIs.</p>
+
+    <h2>Example</h2>
+    <pre><code>// Backend: Node + Express
+const express = require('express');
+const app = express();
+app.get('/hello', (req,res) => res.send('Hello from server!'));
+app.listen(3000);
+
+// Frontend fetch
+&lt;button onclick="loadData()"&gt;Fetch&lt;/button&gt;
+&lt;p id="output"&gt;&lt;/p&gt;
+&lt;script&gt;
+async function loadData() {
+  let res = await fetch('http://localhost:3000/hello');
+  document.getElementById('output').innerText = await res.text();
+}
+&lt;/script&gt;</code></pre>
+  </main>
+</body>
+</html>
